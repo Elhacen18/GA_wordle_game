@@ -274,8 +274,8 @@ def reload_game():
         button.config(state="normal")
 
     message_label.config(text="New game started! Try to guess the word.")
-    play_wordle_with_ga()  # Start the GA for the new target word
-
+    result,_ = play_wordle_with_ga()  # Start the GA for the new target word
+    print(result)
 # Add the Reload button to the main frame
 reload_button = tk.Button(main_frame, text="Reload", font=("Helvetica", 12), width=10, command=reload_game)
 reload_button.pack(pady=10)
